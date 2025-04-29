@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout</title>
+    <style>
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 40px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+            background: #917e7e91;
+            padding: 7px 10px;
+            border-radius: 30px;
+            color: white;
+            
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(51, 51, 51);
+            z-index: 1;
+            font-weight: bold;
+        }
+        nav ul li a:hover{
+           
+            text-decoration: underline;
+            transition: 0.3s;
+
+        }
+         .hero-section {
+            background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fG1lbnRhbHxlbnwwfHx8fDE2ODQ5NTY3NzE&ixlib=rb-4.0.3&q=80&w=1080');
+            background-size: auto 100%;
+            /*background-repeat: no-repeat;*/
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: black;
+            text-align: center;
+        }
+         main {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .sect-main {
+            width: 30%;
+            padding: 15px;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        footer {
+            position: relative;
+            bottom: -100px;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f3f3f3;
+            display: flex;
+            justify-content: center;
+        }
+        /* Phone: screens less than 600px */
+        @media (max-width: 599px) {
+            main {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .sect-main {
+                width: 100%;
+            }
+        }
+
+        /* Tablet: screens between 600px and 1023px */
+        @media (min-width: 600px) and (max-width: 1023px) {
+            main {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            .sect-main {
+                width: 48%;
+            }
+        }
+
+        /* Desktop: screens 1024px and wider */
+        @media (min-width: 1024px) {
+            main {
+                flex-direction: row;
+                gap: 20px;
+            }
+            .sect-main {
+                width: 30%;
+            }
+        }
+
+       
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SERENITY</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero-section">
+        <h4>Achieve balance in Life</h4>
+    </div>
+
+    <div class="main">
+        <main>
+            <div class="about sect-main">
+                <section id="about">
+                    <h2>About Us</h2>
+                    <p>This is the about section.</p>
+                </section>
+            </div>
+            <div class="services sect-main">
+                <section id="services">
+                    <h2>Our Services</h2>
+                    <p>This is the services section.</p>
+                </section>
+            </div>
+            <div class="contact sect-main">
+                <section id="contact">
+                    <h2>Contact Us</h2>
+                    <p>This is the contact section.</p>
+                </section>
+            </div>
+        </main>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2025 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
